@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "fb474944-a0c3-4329-923f-7c3ee6c128d5",
+		"name": "FarmAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SpeciesRead",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/species",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"species"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SpeciesCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"SpeciesName\":\"Coconut\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/species",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"species"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SpeciesUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"SpeciesId\": 4,\r\n        \"SpeciesName\": \"Pomegranate\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/species",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"species"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SpeciesDelete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/species/4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"species",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SaplingsRead",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/sapling",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"sapling"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SaplingsCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"SaplingName\": \"Coconut\",\r\n    \"Species\": \"Coconut\",\r\n    \"DateOfPlantation\": \"2020-06-01\",\r\n    \"PhotoFileName\": \"Coconut.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/sapling",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"sapling"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SaplingsUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"SaplingId\": 4,\r\n        \"SaplingName\": \"Pomegranate\",\r\n        \"Species\": \"Pomegranate\",\r\n        \"DateOfPlantation\": \"2020-06-02\",\r\n        \"PhotoFileName\": \"Pomegranate.jpg\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/sapling",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"sapling"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SaplingsDelete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/sapling/4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"sapling",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SaplingsSaveFile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "uploadedFile",
+							"type": "file",
+							"src": "/C:/Users/param/Source/Repos/FarmAPI/FarmAPI/Images/GuavaSapling.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/sapling/SaveFile",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"sapling",
+						"SaveFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SaplingsGetAllSpeciesNames",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/sapling/GetAllSpeciesNames",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"sapling",
+						"GetAllSpeciesNames"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
